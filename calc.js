@@ -1,5 +1,10 @@
 var result;
 var arrayBox = [];
+var b = [];
+var c = [];
+var d = [];
+var e = [];
+
 	function zero(){
 		arrayBox.push(0);console.log(arrayBox);	
 	}
@@ -45,23 +50,72 @@ var arrayBox = [];
 	function equals(){
 		arrayBox.push("=");console.log(arrayBox);
 		for(var i=0;i<arrayBox.length;i++){
-			if(arrayBox[i]== '+'){
-				add(arrayBox[0],arrayBox[2]);	
-			}
-			else if(arrayBox[i]=="-"){
-				subtract(arrayBox[0],arrayBox[2]);
-			}
-			else if(arrayBox[i]=="*"){
-				multiply(arrayBox[0],arrayBox[2]);
-			}
-			else if(arrayBox[i]=="/"){
-				divide(arrayBox[0],arrayBox[2]);
+		  if(arrayBox[i]!='+' && arrayBox[i]!='-' && arrayBox[i]!='*' && arrayBox[i]!='/'){
+		  	b.push(arrayBox[i]);
+		  	arrayBox[i]= 'x';
+		  }
+		  else{
+		  	break;
+		  }
+		}
+		for(var j=0;j<arrayBox.length;j++){
+			if(arrayBox[j]!='+' && arrayBox[j]!='-' && arrayBox[j]!='*' && arrayBox[j]!='/' && arrayBox[j]!= 'x' && arrayBox[j]!='='){
+				d.push(arrayBox[j]);
+				arrayBox[j]='x';
 			}
 		}
-
+		var c = (Number(b.join('')));
+		console.log('this is c: ',c);
+		var e = (Number(d.join('')));
+		console.log('this is e: ',e);
+		for(var k=0;k<arrayBox.length;k++){
+			if(arrayBox[k] == '+'){
+				for(var m=0;m<arrayBox.length;m++){
+					if(arrayBox[m] == '='){
+						add(c,e);
+						break;
+					}
+				}
+			}
+			else if(arrayBox[k] == '-'){
+				for(var n=0;n<arrayBox.length;n++){	
+				  if(arrayBox[n]=='='){
+				  	subtract(c,e);
+				  	break;
+				  }
+				}
+			}
+			else if(arrayBox[k] == '*'){
+				for(var p=0;p<arrayBox.length;p++){
+					if(arrayBox[p] == '='){
+						multiply(c,e);
+						break;
+					}
+				}
+			}
+			else if(arrayBox[k]== '/'){
+				for(var q=0;q<arrayBox.length;q++){
+					if(arrayBox[q] == '='){
+						divide(c,e);
+						break;
+					}
+				}
+			}
+			else{
+			}
+		}
 	}
 	function clr(){
-		arrayBox = []; console.log(arrayBox);
+		arrayBox = []; 
+		var b = [];
+		var c = 0;
+		var d = [];
+		var e = 0;
+		// console.log(arrayBox);
+		// console.log('b=',b);
+		// console.log('c=',c);
+		// console.log('d=',d);
+		// console.log('e=',e);
 	}
 
 
@@ -84,5 +138,4 @@ var arrayBox = [];
 		result = num1/num2;
 		alert(result);
 	}
-
 	
