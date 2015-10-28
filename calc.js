@@ -73,7 +73,6 @@ var e = [];
 				for(var m=0;m<arrayBox.length;m++){
 					if(arrayBox[m] == '='){
 						add(c,e);
-						break;
 					}
 				}
 			}
@@ -81,7 +80,6 @@ var e = [];
 				for(var n=0;n<arrayBox.length;n++){	
 				  if(arrayBox[n]=='='){
 				  	subtract(c,e);
-				  	break;
 				  }
 				}
 			}
@@ -89,7 +87,6 @@ var e = [];
 				for(var p=0;p<arrayBox.length;p++){
 					if(arrayBox[p] == '='){
 						multiply(c,e);
-						break;
 					}
 				}
 			}
@@ -97,7 +94,6 @@ var e = [];
 				for(var q=0;q<arrayBox.length;q++){
 					if(arrayBox[q] == '='){
 						divide(c,e);
-						break;
 					}
 				}
 			}
@@ -105,37 +101,28 @@ var e = [];
 			}
 		}
 	}
+	// yes that is a 53 line function, I know, I know, sorry!
 	function clr(){
 		arrayBox = []; 
-		var b = [];
-		var c = 0;
-		var d = [];
-		var e = 0;
-		// console.log(arrayBox);
-		// console.log('b=',b);
-		// console.log('c=',c);
-		// console.log('d=',d);
-		// console.log('e=',e);
+		b = [];
+		c = [];
+		d = [];
+		e = [];
 	}
-
-
-
-
-
 	function add(num1,num2){
 		result = num1 + num2;
-		alert(result);
+		alert('The answer is ' + result);
 	}
 	function subtract(num1, num2){
 		result = num1-num2;
-		alert(result);
+		alert('The answer is ' + result);
 	}
 	function multiply(num1,num2){
 		result = num1*num2;
-		alert(result);
+		alert('The answer is ' + result);
 	}
 	function divide(num1,num2){
 		result = num1/num2;
-		alert(result);
+		alert('The answer is ' + result);
 	}
 	
