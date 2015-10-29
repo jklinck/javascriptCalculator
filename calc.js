@@ -7,7 +7,7 @@ var e = [];
 	function arrayPush(num){
 		arrayBox.push(num); console.log(arrayBox);
 	}
-	function equals(){/*this function ends on line 61*/
+	function equals(){     /*this function ends on line 61*/
 		arrayBox.push("=");console.log(arrayBox);
 		for(var i=0;i<arrayBox.length;i++){
 		  if(arrayBox[i]!='+' && arrayBox[i]!='-' && arrayBox[i]!='*' && arrayBox[i]!='/'){
@@ -66,21 +66,23 @@ var e = [];
 		c = [];
 		d = [];
 		e = [];
+		document.getElementById("result").innerHTML = "";
 	}
 	function add(num1,num2){
 		result = num1 + num2;
-		alert('The answer is ' + result);
+		document.getElementById("result").innerHTML = "The answer is: " + result;
 	}
 	function subtract(num1, num2){
 		result = num1-num2;
-		alert('The answer is ' + result);
+		document.getElementById("result").innerHTML = "The answer is: " + result;
 	}
 	function multiply(num1,num2){
 		result = num1*num2;
-		alert('The answer is ' + result);
+		document.getElementById("result").innerHTML = "The answer is: " + result;
 	}
 	function divide(num1,num2){
 		result = num1/num2;
-		alert('The answer is ' + result);
+		document.getElementById("result").innerHTML = "The answer is: " + result;
 	}
+	
 	

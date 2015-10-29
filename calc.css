@@ -18,3 +18,9 @@ input{
 	display: inline-block;
 	float: left; /*this got rid of the whitepace between the number buttons */
 }
+#result{
+	width: 94%;
+	color: red;
+	height: 50px;
+	font-size: 28px;
+}
