@@ -4,50 +4,10 @@ var b = [];
 var c = [];
 var d = [];
 var e = [];
-
-	function zero(){
-		arrayBox.push(0);console.log(arrayBox);	
+	function arrayPush(num){
+		arrayBox.push(num); console.log(arrayBox);
 	}
-	function one(){
-		arrayBox.push(1);console.log(arrayBox);
-	}
-	function two(){
-		arrayBox.push(2);console.log(arrayBox);
-	}
-	function three(){
-		arrayBox.push(3);console.log(arrayBox);
-	}
-	function four(){
-		arrayBox.push(4);console.log(arrayBox);
-	}
-	function five(){
-		arrayBox.push(5);console.log(arrayBox);
-	}
-	function six(){
-		arrayBox.push(6);console.log(arrayBox);
-	}
-	function seven(){
-		arrayBox.push(7);console.log(arrayBox);
-	}
-	function eight(){
-		arrayBox.push(8);console.log(arrayBox);
-	}
-	function nine(){
-		arrayBox.push(9);console.log(arrayBox);
-	}
-	function addition(){
-		arrayBox.push("+");console.log(arrayBox);
-	}
-	function subtraction(){
-		arrayBox.push("-");console.log(arrayBox);
-	}
-	function mult(){
-		arrayBox.push("*");console.log(arrayBox);
-	}
-	function div(){
-		arrayBox.push("/");console.log(arrayBox);
-	}
-	function equals(){
+	function equals(){/*this function ends on line 61*/
 		arrayBox.push("=");console.log(arrayBox);
 		for(var i=0;i<arrayBox.length;i++){
 		  if(arrayBox[i]!='+' && arrayBox[i]!='-' && arrayBox[i]!='*' && arrayBox[i]!='/'){
@@ -97,11 +57,9 @@ var e = [];
 					}
 				}
 			}
-			else{
-			}
 		}
 	}
-	// yes that is a 53 line function, I know, I know, sorry!
+	// yes that is a 51 line function, I know, I know
 	function clr(){
 		arrayBox = []; 
 		b = [];
