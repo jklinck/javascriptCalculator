@@ -1,3 +1,24 @@
+/*
+	Idea for plus/minus button
+	
+	var x = "3+4+9";
+	var z = "";
+	for(var i=0;i<x.length;i++){
+		if(i<x.length-1){
+			z += x[i];
+		}
+		else{
+			z += "("+(x[i]*(-1))+")";
+		}
+	}
+
+	console.log(z);
+
+	loop through string and set end of string to plusMinus value
+
+*/
+
+
 var result;
 var val = '';
 var value2 = '';
