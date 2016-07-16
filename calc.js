@@ -1,89 +1,110 @@
 var result;
-var arrayBox = [];
-var b = [];
-var c = [];
-var d = [];
-var e = [];
-var value;
+var val = '';
+var value2 = '';
 
-function arrayPush(num){
-	arrayBox.push(num); 
-}
-function equals(){     /*this function ends on line 61*/
-	arrayBox.push("=");console.log(arrayBox);
-	for(var i=0;i<arrayBox.length;i++){
-	  if(arrayBox[i]!='+' && arrayBox[i]!='-' && arrayBox[i]!='*' && arrayBox[i]!='/'){
-	  	b.push(arrayBox[i]);
-	  	arrayBox[i]= 'x';
-	  }
-	  else{
-	  	break;
-	  }
-	}
-	for(var j=0;j<arrayBox.length;j++){
-		if(arrayBox[j]!='+' && arrayBox[j]!='-' && arrayBox[j]!='*' && arrayBox[j]!='/' && arrayBox[j]!= 'x' && arrayBox[j]!='='){
-			d.push(arrayBox[j]);
-			arrayBox[j]='x';
-		}
-	}
-	var c = (Number(b.join('')));
-	console.log('this is c: ',c);
-	var e = (Number(d.join('')));
-	console.log('this is e: ',e);
-	for(var k=0;k<arrayBox.length;k++){
-		if(arrayBox[k] == '+'){
-			for(var m=0;m<arrayBox.length;m++){
-				if(arrayBox[m] == '='){
-					add(c,e);
-				}
-			}
-		}
-		else if(arrayBox[k] == '-'){
-			for(var n=0;n<arrayBox.length;n++){	
-			  if(arrayBox[n]=='='){
-			  	subtract(c,e);
-			  }
-			}
-		}
-		else if(arrayBox[k] == '*'){
-			for(var p=0;p<arrayBox.length;p++){
-				if(arrayBox[p] == '='){
-					multiply(c,e);
-				}
-			}
-		}
-		else if(arrayBox[k]== '/'){
-			for(var q=0;q<arrayBox.length;q++){
-				if(arrayBox[q] == '='){
-					divide(c,e);
-				}
-			}
-		}
-	}
-}
-// yes that is a 51 line function, I know, I know
-function clr(){
-	arrayBox = []; 
-	b = [];
-	c = [];
-	d = [];
-	e = [];
+var zero = document.querySelector(".zero");
+zero.addEventListener("click",function(){
+	value2 = zero.value;
+	val += value2;
+});
+
+var one = document.querySelector(".one");
+one.addEventListener("click",function(){
+	value2 = one.value;
+	val += value2;
+});
+
+var two = document.querySelector(".two");
+two.addEventListener("click",function(){
+	value2 = two.value;
+	val += value2;
+});
+
+var three = document.querySelector(".three");
+three.addEventListener("click",function(){
+	value2 = three.value;
+	val += value2;
+});
+
+var four = document.querySelector(".four");
+four.addEventListener("click",function(){
+	value2 = four.value;
+	val += value2;
+});
+
+var five = document.querySelector(".five");
+five.addEventListener("click",function(){
+	value2 = five.value;
+	val += value2;
+});
+
+var six = document.querySelector(".six");
+six.addEventListener("click",function(){
+	value2 = six.value;
+	val += value2;
+});
+
+var seven = document.querySelector(".seven");
+seven.addEventListener("click",function(){
+	value2 = seven.value;
+	val += value2;
+});
+
+var eight = document.querySelector(".eight");
+eight.addEventListener("click",function(){
+	value2 = eight.value;
+	val += value2;
+});
+
+var nine = document.querySelector(".nine");
+nine.addEventListener("click",function(){
+	value2 = nine.value;
+	val += value2;
+});
+
+var decimal = document.querySelector(".decimal");
+decimal.addEventListener("click",function(){
+	value2 = decimal.value;
+	val += value2;
+});
+
+var add = document.querySelector(".add");
+add.addEventListener("click",function(){
+	value2 = add.value;
+	val += value2;
+});
+
+var subtract = document.querySelector(".subtract");
+subtract.addEventListener("click",function(){
+	value2 = subtract.value;
+	val += value2;
+});
+
+var multiply = document.querySelector(".multiply");
+multiply.addEventListener("click",function(){
+	value2 = multiply.value;
+	val += value2;
+});
+
+var divide = document.querySelector(".divide");
+divide.addEventListener("click",function(){
+	value2 = divide.value;
+	val += value2;
+});
+
+var equals = document.querySelector(".equals");
+equals.addEventListener("click",function(){
+	result = eval(val);
+	document.getElementById("result").innerHTML = "The answer is: " + result;
+	val = result;
+});
+
+var clear = document.querySelector(".clear");
+clear.addEventListener("click",function(){
+	val = '';
+	value2 = '';
 	document.getElementById("result").innerHTML = "";
-}
-function add(num1,num2){
-	result = num1 + num2;
-	document.getElementById("result").innerHTML = "The answer is: " + result;
-}
-function subtract(num1, num2){
-	result = num1-num2;
-	document.getElementById("result").innerHTML = "The answer is: " + result;
-}
-function multiply(num1,num2){
-	result = num1*num2;
-	document.getElementById("result").innerHTML = "The answer is: " + result;
-}
-function divide(num1,num2){
-	result = num1/num2;
-	document.getElementById("result").innerHTML = "The answer is: " + result;
-}
+	console.log("val:",val);
+	console.log("value2:",value2);
+});
 

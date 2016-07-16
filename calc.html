@@ -3,28 +3,29 @@
 <head>
 	<title>Javascript calculator</title>
 	<link rel="stylesheet" href="calc.css"/>
-	<script type="text/javascript" src="calc.js"></script>
 </head>
 <body>
 	<div id="container">
 		<h1>Javascript Calculator</h1>
-		<input type="button" value="0" onclick="arrayPush(0)"/>
-		<input type="button" value="1" onclick="arrayPush(1)"/>
-		<input type="button" value="2" onclick="arrayPush(2)"/>
-		<input type="button" value="3" onclick="arrayPush(3)"/>
-		<input type="button" value="4" onclick="arrayPush(4)"/>
-		<input type="button" value="5" onclick="arrayPush(5)"/>
-		<input type="button" value="6" onclick="arrayPush(6)"/>
-		<input type="button" value="7" onclick="arrayPush(7)"/>
-		<input type="button" value="8" onclick="arrayPush(8)"/>
-		<input type="button" value="9" onclick="arrayPush(9)"/>
-		<input type="button" value="+" onclick="arrayPush('+')"/>
-		<input type="button" value="-" onclick="arrayPush('-')"/>
-		<input type="button" value="*" onclick="arrayPush('*')"/>
-		<input type="button" value="/" onclick="arrayPush('/')"/>
-		<input type="button" value="=" onclick="equals()"/>
-		<input type="button" value="C" onclick="clr()"/>
+		<input type="button" class="zero" value="0"/>
+		<input type="button" class="one" value="1"/>
+		<input type="button" class="two" value="2"/>
+		<input type="button" class="three" value="3"/>
+		<input type="button" class="four" value="4"/>
+		<input type="button" class="five" value="5"/>
+		<input type="button" class="six" value="6"/>
+		<input type="button" class="seven" value="7"/>
+		<input type="button" class="eight" value="8"/>
+		<input type="button" class="nine" value="9"/>
+		<input type="button" class="add" value="+"/>
+		<input type="button" class="subtract" value="-"/>
+		<input type="button" class="multiply" value="*"/>
+		<input type="button" class="divide" value="/"/>
+		<input type="button" class="decimal" value="."/>
+		<input type="button" class="equals" value="="/>
+		<input type="button" class="clear "value="C"/>
 		<div id="result"></div>
+		<script type="text/javascript" src="calc.js"></script>
 	</div>
 </body>
 </html>
