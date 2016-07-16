@@ -1,6 +1,6 @@
 /*
 	Idea for plus/minus button
-	
+
 	var x = "3+4+9";
 	var z = "";
 	for(var i=0;i<x.length;i++){
@@ -125,7 +125,5 @@ clear.addEventListener("click",function(){
 	val = '';
 	value2 = '';
 	document.getElementById("result").innerHTML = "";
-	console.log("val:",val);
-	console.log("value2:",value2);
 });
 
