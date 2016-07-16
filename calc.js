@@ -94,7 +94,7 @@ divide.addEventListener("click",function(){
 
 var equals = document.querySelector(".equals");
 equals.addEventListener("click",function(){
-	result = eval(val);
+	result = Parser.evaluate(val);
 	document.getElementById("result").innerHTML = "The answer is: " + result;
 	val = result;
 });
